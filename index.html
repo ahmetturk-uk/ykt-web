@@ -6,10 +6,10 @@
   <title>Yonca Keşkek Türk | Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
-    /* Global Reset & Base Styles */
+    /* Reset & Temel Ayarlar */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -21,25 +21,25 @@
     }
 
     body {
-      background-color: #0f172a; /* Koyu lacivert/siyah zemin */
-      color: #94a3b8; /* Açık gri metinler */
-      font-family: 'Inter', sans-serif;
-      line-height: 1.6;
+      background-color: #181514; /* Sıcak derin espresso/çikolata zemin */
+      color: #b0a498; /* Yumuşak vizon gri metinler */
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.65;
       overflow-x: hidden;
       position: relative;
     }
 
-    /* 1. FAREYİ TAKİP EDEN IŞIK HÜZMESİ (SPOTLIGHT) */
+    /* 1. FAREYİ TAKİP EDEN SICAK ŞEFTALİ IŞIK (SPOTLIGHT) */
     .spotlight {
       pointer-events: none;
       position: fixed;
       inset: 0;
       z-index: 30;
       transition: background 0.15s ease;
-      background: radial-gradient(600px at 0px 0px, rgba(29, 78, 216, 0.15), transparent 80%);
+      background: radial-gradient(600px at 0px 0px, rgba(232, 178, 152, 0.12), transparent 80%);
     }
 
-    /* Ana Konteyner Düzeni */
+    /* Ana Konteyner */
     .container {
       max-width: 1280px;
       margin: 0 auto;
@@ -49,7 +49,7 @@
       padding: 0 96px;
     }
 
-    /* SOL TARAF (STICKY / SABİT KISIM) */
+    /* SOL TARAF (STICKY PANEL) */
     .left-col {
       position: sticky;
       top: 0;
@@ -62,29 +62,29 @@
     }
 
     .hero-info h1 {
-      font-size: 48px;
+      font-size: 46px;
       font-weight: 700;
-      color: #f1f5f9;
-      letter-spacing: -1px;
+      color: #f7eedd; /* Sıcak krem başlık */
+      letter-spacing: -0.8px;
     }
 
     .hero-info h2 {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 500;
-      color: #f1f5f9;
+      color: #e8b298; /* Şeftali tonu unvan */
       margin-top: 12px;
     }
 
     .hero-info p {
-      font-size: 16px;
-      margin-top: 16px;
-      color: #94a3b8;
-      max-width: 320px;
+      font-size: 15px;
+      margin-top: 18px;
+      color: #b0a498;
+      max-width: 330px;
     }
 
-    /* SOL MENÜ VE UZAYAN ÇİZGİLER (NAV) */
+    /* SOL MENÜ VE UZAYAN ÇİZGİLER */
     .nav-menu {
-      margin-top: 64px;
+      margin-top: 56px;
       display: flex;
       flex-direction: column;
       gap: 20px;
@@ -94,13 +94,12 @@
       display: flex;
       align-items: center;
       text-decoration: none;
-      group: nav;
     }
 
     .nav-line {
       width: 32px;
       height: 1px;
-      background-color: #475569;
+      background-color: #3d3531;
       margin-right: 16px;
       transition: all 0.3s ease;
     }
@@ -110,45 +109,46 @@
       font-weight: 700;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #64748b;
+      color: #6e6258;
       transition: all 0.3s ease;
     }
 
-    /* Menüye Hovers veya Scroll ile Aktiflik */
+    /* Menü Aktiflik ve Hover */
     .nav-item:hover .nav-line,
     .nav-item.active .nav-line {
       width: 64px;
-      background-color: #f1f5f9;
+      background-color: #f7eedd;
     }
 
     .nav-item:hover .nav-text,
     .nav-item.active .nav-text {
-      color: #f1f5f9;
+      color: #f7eedd;
     }
 
     /* SOSYAL MEDYA İKONLARI */
     .social-links {
       display: flex;
-      gap: 24px;
+      gap: 22px;
       align-items: center;
     }
 
     .social-links a {
-      color: #94a3b8;
-      transition: color 0.2s ease;
+      color: #8c7e73;
+      transition: color 0.2s ease, transform 0.2s ease;
     }
 
     .social-links a:hover {
-      color: #f1f5f9;
+      color: #e8b298;
+      transform: translateY(-2px);
     }
 
     .social-links svg {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       fill: currentColor;
     }
 
-    /* SAĞ TARAF (KAYAN KISIM / SCROLL AREA) */
+    /* SAĞ TARAF (SCROLL ALANI) */
     .right-col {
       width: 52%;
       padding: 96px 0;
@@ -163,43 +163,42 @@
 
     .section-title-mobile {
       display: none;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #f1f5f9;
+      color: #f7eedd;
       margin-bottom: 24px;
       position: sticky;
       top: 0;
-      background: rgba(15, 23, 42, 0.8);
-      backdrop-filter: blur(8px);
+      background: rgba(24, 21, 20, 0.85);
+      backdrop-filter: blur(10px);
       padding: 16px 0;
       z-index: 20;
     }
 
     .about-text {
       font-size: 16px;
-      color: #94a3b8;
+      color: #b0a498;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 18px;
     }
 
     .about-text strong {
-      color: #f1f5f9;
-      font-weight: 500;
+      color: #f7eedd;
+      font-weight: 600;
     }
 
-    /* KART LİSTESİ VE HOVER EFEKTLERİ */
+    /* KART LİSTESİ VE HOVER ETKİLEŞİMİ */
     .card-list {
       display: flex;
       flex-direction: column;
-      gap: 48px;
+      gap: 32px;
     }
 
-    /* Bir karta hover yapıldığında diğerlerinin solması */
     .card-list:hover .card:not(:hover) {
-      opacity: 0.5;
+      opacity: 0.45;
     }
 
     .card {
@@ -207,7 +206,7 @@
       grid-template-columns: 1fr 3fr;
       gap: 16px;
       padding: 24px;
-      border-radius: 8px;
+      border-radius: 12px;
       transition: all 0.3s ease;
       cursor: pointer;
       text-decoration: none;
@@ -216,15 +215,15 @@
     }
 
     .card:hover {
-      background: rgba(30, 41, 59, 0.5);
-      border-color: rgba(226, 232, 240, 0.1);
-      box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+      background: rgba(43, 37, 34, 0.45);
+      border-color: rgba(232, 178, 152, 0.15);
+      box-shadow: 0 12px 32px -10px rgba(0,0,0,0.4);
     }
 
     .card-date {
       font-size: 12px;
       font-weight: 600;
-      color: #64748b;
+      color: #7d7065;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       margin-top: 4px;
@@ -232,8 +231,8 @@
 
     .card-content h3 {
       font-size: 16px;
-      font-weight: 500;
-      color: #f1f5f9;
+      font-weight: 600;
+      color: #f7eedd;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -241,7 +240,7 @@
     }
 
     .card:hover .card-content h3 {
-      color: #5eead4; /* Turkuaz parlama */
+      color: #e8b298; /* Sıcak şeftali parlama */
     }
 
     .card-content h3 svg {
@@ -252,22 +251,22 @@
     }
 
     .card:hover .card-content h3 svg {
-      transform: translate(2px, -2px);
+      transform: translate(3px, -3px);
     }
 
     .card-role {
       font-size: 14px;
-      color: #94a3b8;
+      color: #8c7e73;
       margin-bottom: 12px;
     }
 
     .card-desc {
       font-size: 14px;
-      color: #94a3b8;
+      color: #b0a498;
       margin-bottom: 16px;
     }
 
-    /* TEKNOLOJİ ETİKETLERİ (TAG PILLS) */
+    /* TEKNOLOJİ ETİKETLERİ */
     .card-tags {
       display: flex;
       flex-wrap: wrap;
@@ -277,13 +276,14 @@
     .tag {
       font-size: 12px;
       font-weight: 500;
-      color: #5eead4;
-      background: rgba(45, 212, 191, 0.1);
+      color: #e8b298;
+      background: rgba(232, 178, 152, 0.08);
+      border: 1px solid rgba(232, 178, 152, 0.15);
       padding: 4px 12px;
       border-radius: 9999px;
     }
 
-    /* MOBİL UYUMLULUK */
+    /* MOBİL UYUM */
     @media (max-width: 1024px) {
       .container {
         flex-direction: column;
@@ -298,7 +298,7 @@
       }
 
       .nav-menu {
-        display: none; /* Mobilde sol menü gizlenir */
+        display: none;
       }
 
       .right-col {
@@ -319,12 +319,12 @@
 </head>
 <body>
 
-  <!-- Spot Işık Efekti -->
+  <!-- Sıcak Şeftali Işık Efekti -->
   <div class="spotlight" id="spotlight"></div>
 
   <div class="container">
     
-    <!-- SOL SABİT PANEL -->
+    <!-- SOL PANEL -->
     <header class="left-col">
       <div>
         <div class="hero-info">
@@ -333,7 +333,6 @@
           <p>Kullanıcı odaklı, estetik ve işlevsel dijital deneyimler ile web arayüzleri tasarlayıp geliştiriyorum.</p>
         </div>
 
-        <!-- Scroll ile Otomatik Uzayan Çizgili Menü -->
         <nav class="nav-menu">
           <a href="#about" class="nav-item active" id="nav-about">
             <span class="nav-line"></span>
@@ -350,45 +349,43 @@
         </nav>
       </div>
 
-      <!-- Sosyal Medya İkonları -->
-      <!-- SOSYAL MEDYA İKONLARI -->
-<div class="social-links">
-    <!-- LinkedIn -->
-  <a href="https://linkedin.com/in/yoncakeskekturk" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-    <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-  </a>
-<!-- X (Twitter) -->
-  <a href="https://twitter.com/KeskekTurk" target="_blank" aria-label="X" title="X (Twitter)">
-    <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-  </a>
-
-  <!-- Email -->
-  <a href="mailto:yoncakeskekturk@outlook.com" aria-label="Email" title="E-posta">
-    <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
-  </a>
-</div>
+      <!-- İKONLAR -->
+      <div class="social-links">
+        <a href="https://github.com" target="_blank" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" title="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://twitter.com" target="_blank" aria-label="X" title="X (Twitter)">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="mailto:eposta@adresiniz.com" aria-label="Email" title="E-posta">
+          <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm21.518 2l-9.518 7.713-9.518-7.713h19.036zm-19.518 14v-11.817l10 8.104 10-8.104v11.817h-20z"/></svg>
+        </a>
+      </div>
     </header>
 
-    <!-- SAĞ KAYAN PANEL -->
+    <!-- SAĞ PANEL -->
     <main class="right-col">
       
-      <!-- ABOUT SECTION -->
+      <!-- ABOUT -->
       <section id="about" class="section">
         <h2 class="section-title-mobile">About</h2>
         <div class="about-text">
           <p>
-            Tasarım ve yazılımın kesişim noktasında çalışan bir <strong>UI/UX Tasarımcısı ve Frontend Geliştiriciyim</strong>. Kullanıcıların dijital ürünlerle etkileşime geçerken hissettikleri sadelik ve akıcılık benim odak noktamdır.
+            Tasarım ve teknolojinin birleştiği noktada çalışan bir <strong>UI/UX Tasarımcısı & Frontend Developer</strong>'ım. Dijital ürünlerde estetik görsellik ile akıcı kullanıcı deneyimini bir araya getiriyorum.
           </p>
           <p>
-            Karmaşık problemleri, şık ve minimalist arayüz çözümlerine dönüştürmekten keyif alıyorum. Tasarım sistemleri oluşturma, modern web teknolojileri (HTML, CSS, JavaScript) ve responsive yapılar üzerine projeler geliştiriyorum.
-          </p>
-          <p>
-            Boş zamanlarımda marka kimlikleri tasarlıyor, yeni arayüz trendlerini inceliyor ve kullanıcı deneyimini iyileştirecek mikrolar tasarlıyorum.
+            Karmaşık fikirleri ve iş süreçlerini, kullanıcı dostu ve minimalist arayüz çözümlerine dönüştürmekten keyif alıyorum.
           </p>
         </div>
       </section>
 
-      <!-- EXPERIENCE SECTION -->
+      <!-- EXPERIENCE -->
       <section id="experience" class="section">
         <h2 class="section-title-mobile">Experience</h2>
         <div class="card-list">
@@ -397,11 +394,11 @@
             <div class="card-date">2024 — PRESENT</div>
             <div class="card-content">
               <h3>
-                Senior Lead Designer & Developer
+                Senior Designer & Developer
                 <svg viewBox="0 0 20 20"><path d="M5.22 14.78a.75.75 0 001.06 0L12 9.06v4.69a.75.75 0 001.5 0V7.5a.75.75 0 00-.75-.75H7.5a.75.75 0 000 1.5h4.69L6.28 14.22a.75.75 0 000 1.06z"/></svg>
               </h3>
               <div class="card-role">Studio Design • Freelance</div>
-              <p class="card-desc">Markalar ve girişimler için baştan sona web siteleri, mobil arayüz tasarımları ve modern frontend kodlama çözümleri üretiyorum.</p>
+              <p class="card-desc">Markalar için özelleştirilmiş web tasarımları, arayüz mimarileri ve yüksek performanslı kod yapıları geliştiriyorum.</p>
               <div class="card-tags">
                 <span class="tag">UI/UX</span>
                 <span class="tag">Figma</span>
@@ -411,60 +408,26 @@
             </div>
           </a>
 
-          <a href="#" class="card">
-            <div class="card-date">2022 — 2024</div>
-            <div class="card-content">
-              <h3>
-                Frontend Designer
-                <svg viewBox="0 0 20 20"><path d="M5.22 14.78a.75.75 0 001.06 0L12 9.06v4.69a.75.75 0 001.5 0V7.5a.75.75 0 00-.75-.75H7.5a.75.75 0 000 1.5h4.69L6.28 14.22a.75.75 0 000 1.06z"/></svg>
-              </h3>
-              <div class="card-role">Creative Agency</div>
-              <p class="card-desc">Müşteri projeleri için piksel hassasiyetinde bileşen kütüphaneleri ve duyarlı (responsive) landing page sayfaları hazırladım.</p>
-              <div class="card-tags">
-                <span class="tag">React</span>
-                <span class="tag">Tailwind</span>
-                <span class="tag">Design Systems</span>
-              </div>
-            </div>
-          </a>
-
         </div>
       </section>
 
-      <!-- PROJECTS SECTION -->
+      <!-- PROJECTS -->
       <section id="projects" class="section">
         <h2 class="section-title-mobile">Projects</h2>
         <div class="card-list">
 
           <a href="#" class="card">
-            <div class="card-date">PROJECT 01</div>
+            <div class="card-date">2026</div>
             <div class="card-content">
               <h3>
-                Personal Portfolio Website
+                Personal Portfolio & Brand Studio
                 <svg viewBox="0 0 20 20"><path d="M5.22 14.78a.75.75 0 001.06 0L12 9.06v4.69a.75.75 0 001.5 0V7.5a.75.75 0 00-.75-.75H7.5a.75.75 0 000 1.5h4.69L6.28 14.22a.75.75 0 000 1.06z"/></svg>
               </h3>
-              <p class="card-desc">GitHub Pages üzerinde barındırılan, özel domain yönlendirmeli, performanslı ve minimalist portfolyo sitesi.</p>
+              <p class="card-desc">Özel domain yönlendirmeli, dinamik etkileşimli ve yüksek performanslı kişisel portfolyo çalışması.</p>
               <div class="card-tags">
                 <span class="tag">GitHub Pages</span>
                 <span class="tag">HTML5</span>
                 <span class="tag">CSS Grid</span>
-                <span class="tag">Vanilla JS</span>
-              </div>
-            </div>
-          </a>
-
-          <a href="#" class="card">
-            <div class="card-date">PROJECT 02</div>
-            <div class="card-content">
-              <h3>
-                Design System & Styleguide
-                <svg viewBox="0 0 20 20"><path d="M5.22 14.78a.75.75 0 001.06 0L12 9.06v4.69a.75.75 0 001.5 0V7.5a.75.75 0 00-.75-.75H7.5a.75.75 0 000 1.5h4.69L6.28 14.22a.75.75 0 000 1.06z"/></svg>
-              </h3>
-              <p class="card-desc">Dijital ürünler için tutarlı renk, tipografi, buton ve form bileşenlerinden oluşan kapsamlı UI kit çalışması.</p>
-              <div class="card-tags">
-                <span class="tag">Figma</span>
-                <span class="tag">UI/UX</span>
-                <span class="tag">Design Tokens</span>
               </div>
             </div>
           </a>
@@ -475,15 +438,14 @@
     </main>
   </div>
 
-  <!-- JAVASCRIPT: AKIŞLAR, FARE TAKİBİ VE SCROLL DETEKTÖRÜ -->
   <script>
-    // 1. FARE YÖNLENDİRMELİ SPOTLIGHT IŞIK EFEKTİ
+    // SICAK ŞEFTALİ SPOTLIGHT IŞIĞI
     const spotlight = document.getElementById('spotlight');
     window.addEventListener('mousemove', (e) => {
-      spotlight.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
+      spotlight.style.background = `radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(232, 178, 152, 0.12), transparent 80%)`;
     });
 
-    // 2. SCROLL EDİLDİKÇE SOL MENÜ ÇİZGİSİNİ UZATAN INTERSECTION OBSERVER
+    // SCROLL TAKİBİ VE MENÜ UZAMASI
     const sections = document.querySelectorAll('.section');
     const navItems = {
       'about': document.getElementById('nav-about'),
@@ -491,25 +453,17 @@
       'projects': document.getElementById('nav-projects')
     };
 
-    const observerOptions = {
-      root: null,
-      rootMargin: '-20% 0px -60% 0px', // Ekranda hangi bölümün daha çok göründüğünü tespit eder
-      threshold: 0
-    };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           const id = entry.target.getAttribute('id');
-          // Tüm aktiflikleri kaldır
           Object.values(navItems).forEach(item => item.classList.remove('active'));
-          // İlgili menüyü aktif yap (Çizgi uzasın)
           if (navItems[id]) {
             navItems[id].classList.add('active');
           }
         }
       });
-    }, observerOptions);
+    }, { rootMargin: '-20% 0px -60% 0px' });
 
     sections.forEach(section => observer.observe(section));
   </script>
