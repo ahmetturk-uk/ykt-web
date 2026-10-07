@@ -209,3 +209,36 @@ p {
         font-size: 2.5rem;
     }
 }
+
+/* Sosyal Medya Bölümü */
+.social-links {
+    margin-top: 40px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.social-links .text-small {
+    margin-bottom: 10px;
+    color: #777;
+}
+
+.social-buttons-container {
+    display: flex;
+    gap: 15px;
+}
+
+.social-btn {
+    text-decoration: none;
+    color: #7265e3;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: 1px solid #7265e3;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #7265e3;
+    color: #ffffff;
+}
