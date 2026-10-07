@@ -50,6 +50,8 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-radius: 30px;
+    margin: 40px;
 }
 
 .image-box {
@@ -185,9 +187,14 @@ p {
     .split-section {
         grid-template-columns: 1fr;
     }
+
+    .content-box {
+        margin: 20px; /* Mobilde boşluğu daraltır */
+    }
     
     .image-box {
         min-height: 400px;
+        padding: 20px;
     }
     
     /* İkinci bölümdeki fotoğrafın mobilde üstte çıkması için */
