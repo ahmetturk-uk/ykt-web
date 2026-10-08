@@ -385,7 +385,38 @@ section { margin-bottom: 120px; scroll-margin-top: 96px; }
 .page-single h1 { font-size: 40px; font-weight: 800; color: var(--heading); letter-spacing: -1px; margin-bottom: 8px; }
 .year { font-size: 18px; font-weight: 700; margin: 32px 0 8px; }
 
-footer.note { font-size: 13px; color: var(--muted); max-width: 460px; }
+footer.note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+footer.note .divider {
+  width: 1px;
+  height: 14px;
+  margin: 0 10px;
+  background: var(--border);
+}
+footer.note .credit {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 12px;
+  border-radius: 9999px;
+  font-weight: 700;
+  color: var(--accent);
+  background: var(--chip-bg);
+  transition: all 0.2s;
+}
+footer.note .credit:hover {
+  color: #fff;
+  background: var(--gradient);
+  transform: translateY(-1px);
+}
+footer.note .credit .arrow { transition: transform 0.2s; }
+footer.note .credit:hover .arrow { transform: translate(2px, -2px); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
