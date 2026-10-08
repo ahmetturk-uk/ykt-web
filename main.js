@@ -71,6 +71,45 @@ function initFastScroll() {
   });
 }
 
+// ---------- Analytics events (Umami; no-op until the Umami script is loaded) ----------
+function track(name, data) {
+  if (window.umami && typeof window.umami.track === 'function') window.umami.track(name, data);
+}
+
+function initAnalytics() {
+  // Section views: counted once per visit, when at least 40% of a section is on screen
+  const seen = new Set();
+  const io = 'IntersectionObserver' in window && new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      const id = en.target.id;
+      if (en.isIntersecting && !seen.has(id)) {
+        seen.add(id);
+        track('section-view', { section: id });
+      }
+    });
+  }, { threshold: 0.4 });
+  if (io) document.querySelectorAll('main section[id]').forEach((s) => io.observe(s));
+
+  // Clicks on outbound links, nav items, language switch
+  document.addEventListener('click', (e) => {
+    const lang = e.target.closest('[data-set-lang]');
+    if (lang) return track('language', { lang: lang.dataset.setLang });
+    const a = e.target.closest('a[href]');
+    if (!a) return;
+    const href = a.getAttribute('href');
+    if (a.closest('.nav')) return track('nav-click', { section: href.slice(1) });
+    if (href.startsWith('mailto:')) return track('email-click');
+    if (/^https?:/.test(href) && !href.includes(location.hostname)) {
+      return track('outbound-click', { url: href, label: a.title || a.textContent.trim().slice(0, 60) });
+    }
+    if (href.includes('publications.html')) return track('all-publications-click');
+  });
+
+  // Contact form submissions
+  const form = document.querySelector('.contact-form');
+  if (form) form.addEventListener('submit', () => track('contact-form-submit'));
+}
+
 // ---------- Spotlight following the mouse ----------
 function initSpotlight() {
   const s = document.querySelector('.spotlight');
@@ -110,5 +149,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSpotlight();
   initFilters();
   initFastScroll();
+  initAnalytics();
 });
 
