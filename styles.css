@@ -215,6 +215,16 @@ html[data-lang="tr"] [lang="en"]:not(html) {
 
 section { margin-bottom: 120px; scroll-margin-top: 96px; }
 
+/* Tab mode (wide screens): one section visible at a time */
+.tabbed .content { min-height: 100vh; display: flex; flex-direction: column; }
+.tabbed section { margin-bottom: 64px; animation: section-in 0.35s ease both; }
+.tabbed footer.note { margin-top: auto; }
+@keyframes section-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .tabbed section { animation: none; } }
+
 .section-title {
   display: none;
   font-size: 13px;

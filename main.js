@@ -25,6 +25,7 @@ function initScrollSpy() {
   const sections = [...links].map((a) => document.querySelector(a.getAttribute('href')));
 
   const update = () => {
+    if (document.body.classList.contains('tabbed')) return;
     const line = window.innerHeight * 0.35;
     let current = sections[0];
     sections.forEach((s) => {
@@ -50,6 +51,7 @@ function initFastScroll() {
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="#"]');
     if (!a) return;
+    if (document.body.classList.contains('tabbed') && a.closest('.nav')) return;
     const id = a.getAttribute('href');
     const target = id.length > 1 && document.querySelector(id);
     if (!target) return;
@@ -69,6 +71,44 @@ function initFastScroll() {
     };
     requestAnimationFrame(step);
   });
+}
+
+// ---------- Tabs: on wide screens show one section at a time ----------
+function initTabs() {
+  const links = [...document.querySelectorAll('.nav a')];
+  if (!links.length) return;
+  const sections = links.map((a) => document.querySelector(a.getAttribute('href')));
+  const ids = sections.map((s) => s.id);
+  const wide = window.matchMedia('(min-width: 1001px)');
+
+  const show = (id) => {
+    if (!ids.includes(id)) id = ids[0];
+    sections.forEach((s) => { s.hidden = s.id !== id; });
+    links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === '#' + id));
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  };
+
+  const apply = () => {
+    if (wide.matches) {
+      document.body.classList.add('tabbed');
+      show(location.hash.slice(1));
+    } else {
+      document.body.classList.remove('tabbed');
+      sections.forEach((s) => { s.hidden = false; });
+    }
+  };
+
+  links.forEach((a) =>
+    a.addEventListener('click', (e) => {
+      if (!document.body.classList.contains('tabbed')) return;
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      history.replaceState(null, '', '#' + id);
+      show(id);
+    })
+  );
+  wide.addEventListener('change', apply);
+  apply();
 }
 
 // ---------- Spotlight following the mouse ----------
@@ -106,6 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (b) setLang(b.dataset.setLang);
   });
   setLang(getLang());
+  initTabs();
   initScrollSpy();
   initSpotlight();
   initFilters();
