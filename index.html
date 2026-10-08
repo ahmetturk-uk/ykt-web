@@ -3,33 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Yonca Keşkek Türk</title>
+  <title>Dr. Yonca Keşkek Türk</title>
   <meta name="description" content="Dr. Yonca Keşkek Türk — Assistant Professor. Research, publications, projects and contact.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23181514'/><text x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-weight='700' font-size='26' fill='%23e8b298'>YKT</text></svg>">
+  <meta property="og:title" content="Dr. Yonca Keşkek Türk">
+  <meta property="og:description" content="Assistant Professor — research, publications and projects.">
+  <meta name="theme-color" content="#faf6f0">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%23b4233a'/><stop offset='1' stop-color='%238c1c2c'/></linearGradient></defs><rect width='64' height='64' rx='14' fill='url(%23g)'/><text x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-weight='800' font-size='24' fill='white'>YKT</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=11">
-  <script src="main.js?v=11" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=24">
+  <script src="main.js?v=24" defer></script>
 </head>
-<body class="home">
-<main>
-  <div class="portrait"><span lang="en">Photo</span><span lang="tr">Fotoğraf</span></div>
-  <span class="eyebrow"><span lang="en">Assistant Professor</span><span lang="tr">Dr. Öğretim Üyesi</span></span>
-  <h1>Dr. Yonca Keşkek Türk</h1>
-  <p class="affiliation"><span class="placeholder"><span lang="en">Department · University</span><span lang="tr">Bölüm · Üniversite</span></span></p>
-  <p class="lead"><span class="placeholder"><span lang="en">A short introduction: research focus and current interests. Two or three sentences.</span><span lang="tr">Kısa tanıtım: araştırma odağı ve güncel ilgi alanları. İki üç cümle.</span></span></p>
-  <div class="btn-row">
-    <a class="btn btn-solid" href="publications.html"><span lang="en">Publications</span><span lang="tr">Yayınlar</span></a>
-    <a class="btn" href="contact.html"><span lang="en">Get in touch</span><span lang="tr">İletişime geç</span></a>
+<body>
+  <div class="bg-blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+  <div class="spotlight" aria-hidden="true"></div>
+
+  <div class="layout">
+    <header class="sidebar">
+      <div>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="tr">TR</button>
+      </div>
+        <div class="portrait"><div><span lang="en">Photo</span><span lang="tr">Fotoğraf</span></div></div>
+        <h1>Yonca Keşkek Türk</h1>
+        <div class="title gradient-text"><span lang="en">Assistant Professor, Ph.D.</span><span lang="tr">Dr. Öğretim Üyesi</span></div>
+        <p class="tagline"><span class="placeholder"><span lang="en">One sentence about the research focus.</span><span lang="tr">Araştırma odağını anlatan tek cümle.</span></span></p>
+        <nav aria-label="Sections">
+          <ul class="nav">
+        <li><a href="#about"><span lang="en">About</span><span lang="tr">Hakkında</span></a></li>
+        <li><a href="#experience"><span lang="en">Experience</span><span lang="tr">Deneyim</span></a></li>
+        <li><a href="#publications"><span lang="en">Publications</span><span lang="tr">Yayınlar</span></a></li>
+        <li><a href="#projects"><span lang="en">Projects</span><span lang="tr">Projeler</span></a></li>
+        <li><a href="#contact"><span lang="en">Contact</span><span lang="tr">İletişim</span></a></li>
+          </ul>
+        </nav>
+      </div>
+      <ul class="socials" aria-label="Profiles">
+        <li><a href="#" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg></a></li>
+        <li><a href="#" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><span class="text-icon">iD</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><span class="text-icon">RG</span></a></li>
+        <li><a href="#" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></li>
+        <li><a href="mailto:yoncakeskekturk@outlook.com" aria-label="Email" title="Email"><svg viewBox="0 0 24 24"><path d="M0 3v18h24V3H0zm21.518 2L12 12.713 2.482 5h19.036zM2 19V7.183l10 8.104 10-8.104V19H2z"/></svg></a></li>
+      </ul>
+    </header>
+
+    <main class="content">
+      <section id="about">
+        <h2 class="section-title"><span lang="en">About</span><span lang="tr">Hakkında</span></h2>
+        <p><span class="placeholder"><span lang="en">Biography paragraph 1: current position, department and university.</span><span lang="tr">Biyografi 1. paragraf: şu anki pozisyon, bölüm ve üniversite.</span></span></p>
+        <p><span class="placeholder"><span lang="en">Paragraph 2: research interests and what drives the work.</span><span lang="tr">2. paragraf: araştırma ilgi alanları ve çalışmaların amacı.</span></span></p>
+        <h3 class="subhead"><span lang="en">Research Interests</span><span lang="tr">Araştırma Alanları</span></h3>
+        <ul class="tags">
+          <li class="tag"><span lang="en">Research area 1</span><span lang="tr">Araştırma alanı 1</span></li>
+          <li class="tag"><span lang="en">Research area 2</span><span lang="tr">Araştırma alanı 2</span></li>
+          <li class="tag"><span lang="en">Research area 3</span><span lang="tr">Araştırma alanı 3</span></li>
+        </ul>
+        <h3 class="subhead"><span lang="en">Education</span><span lang="tr">Eğitim</span></h3>
+        <ul class="cards">
+          <li class="entry"><div class="when">20XX</div><div><h3><span lang="en">Ph.D.</span><span lang="tr">Doktora</span></h3><div class="sub"><span class="placeholder"><span lang="en">University · Thesis title</span><span lang="tr">Üniversite · Tez adı</span></span></div></div></li>
+          <li class="entry"><div class="when">20XX</div><div><h3><span lang="en">M.Sc.</span><span lang="tr">Yüksek Lisans</span></h3><div class="sub"><span class="placeholder"><span lang="en">University · Thesis title</span><span lang="tr">Üniversite · Tez adı</span></span></div></div></li>
+          <li class="entry"><div class="when">20XX</div><div><h3><span lang="en">B.Sc.</span><span lang="tr">Lisans</span></h3><div class="sub"><span class="placeholder"><span lang="en">University</span><span lang="tr">Üniversite</span></span></div></div></li>
+        </ul>
+      </section>
+
+      <section id="experience">
+        <h2 class="section-title"><span lang="en">Experience</span><span lang="tr">Deneyim</span></h2>
+        <ul class="cards">
+        <li class="entry">
+          <div class="when"><span lang="en">20XX — Present</span><span lang="tr">20XX — Günümüz</span></div>
+          <div>
+            <h3><span lang="en">Assistant Professor</span><span lang="tr">Dr. Öğretim Üyesi</span></h3>
+            <div class="sub"><span class="placeholder"><span lang="en">Department, University</span><span lang="tr">Bölüm, Üniversite</span></span></div>
+            <p><span class="placeholder"><span lang="en">Short description of responsibilities and focus.</span><span lang="tr">Görev ve sorumlulukların kısa açıklaması.</span></span></p>
+            <ul class="tags"><li class="tag"><span lang="en">Teaching</span><span lang="tr">Eğitim</span></li><li class="tag"><span lang="en">Research</span><span lang="tr">Araştırma</span></li></ul>
+          </div>
+        </li>
+        <li class="entry">
+          <div class="when"><span lang="en">20XX — 20XX</span><span lang="tr">20XX — 20XX</span></div>
+          <div>
+            <h3><span lang="en">Research Assistant</span><span lang="tr">Araştırma Görevlisi</span></h3>
+            <div class="sub"><span class="placeholder"><span lang="en">Department, University</span><span lang="tr">Bölüm, Üniversite</span></span></div>
+            <p><span class="placeholder"><span lang="en">Short description of responsibilities and focus.</span><span lang="tr">Görev ve sorumlulukların kısa açıklaması.</span></span></p>
+            <ul class="tags"><li class="tag"><span lang="en">Teaching</span><span lang="tr">Eğitim</span></li><li class="tag"><span lang="en">Research</span><span lang="tr">Araştırma</span></li></ul>
+          </div>
+        </li>
+        </ul>
+        <h3 class="subhead"><span lang="en">Courses Taught</span><span lang="tr">Verilen Dersler</span></h3>
+        <ul class="tags">
+          <li class="tag"><span class="placeholder"><span lang="en">Course name</span><span lang="tr">Ders adı</span></span></li>
+          <li class="tag"><span class="placeholder"><span lang="en">Course name</span><span lang="tr">Ders adı</span></span></li>
+        </ul>
+      </section>
+
+      <section id="publications">
+        <h2 class="section-title"><span lang="en">Publications</span><span lang="tr">Yayınlar</span></h2>
+        <ul class="cards">
+        <li class="entry" data-type="article">
+          <div class="when">2026</div>
+          <div>
+            <h3><a class="stretched" href="#" target="_blank" rel="noopener"><span class="placeholder"><span lang="en">Publication title</span><span lang="tr">Yayın başlığı</span></span> <span class="arrow">↗</span></a></h3>
+            <div class="sub"><span class="placeholder"><span lang="en">Authors · Journal, Vol(Issue)</span><span lang="tr">Yazarlar · Dergi, Cilt(Sayı)</span></span></div>
+            <ul class="tags"><li class="tag"><span lang="en">Article</span><span lang="tr">Makale</span></li></ul>
+          </div>
+        </li>
+        <li class="entry" data-type="conference">
+          <div class="when">2025</div>
+          <div>
+            <h3><a class="stretched" href="#" target="_blank" rel="noopener"><span class="placeholder"><span lang="en">Publication title</span><span lang="tr">Yayın başlığı</span></span> <span class="arrow">↗</span></a></h3>
+            <div class="sub"><span class="placeholder"><span lang="en">Authors · Conference, City</span><span lang="tr">Yazarlar · Konferans, Şehir</span></span></div>
+            <ul class="tags"><li class="tag"><span lang="en">Conference</span><span lang="tr">Bildiri</span></li></ul>
+          </div>
+        </li>
+        <li class="entry" data-type="book">
+          <div class="when">2025</div>
+          <div>
+            <h3><a class="stretched" href="#" target="_blank" rel="noopener"><span class="placeholder"><span lang="en">Publication title</span><span lang="tr">Yayın başlığı</span></span> <span class="arrow">↗</span></a></h3>
+            <div class="sub"><span class="placeholder"><span lang="en">Authors · Book, Publisher</span><span lang="tr">Yazarlar · Kitap, Yayınevi</span></span></div>
+            <ul class="tags"><li class="tag"><span lang="en">Book Chapter</span><span lang="tr">Kitap Bölümü</span></li></ul>
+          </div>
+        </li>
+        </ul>
+        <a class="more-link" href="publications.html"><span lang="en">View all publications</span><span lang="tr">Tüm yayınları gör</span> <span class="arrow">→</span></a>
+      </section>
+
+      <section id="projects">
+        <h2 class="section-title"><span lang="en">Projects</span><span lang="tr">Projeler</span></h2>
+        <ul class="cards">
+        <li class="entry">
+          <div><div class="thumb"></div></div>
+          <div>
+            <h3><span class="placeholder"><span lang="en">Project title</span><span lang="tr">Proje adı</span></span> <span class="arrow">↗</span></h3>
+            <div class="sub"><span class="placeholder"><span lang="en">TÜBİTAK / BAP · 20XX–20XX · Role</span><span lang="tr">TÜBİTAK / BAP · 20XX–20XX · Görev</span></span></div>
+            <p><span class="placeholder"><span lang="en">Short project summary: aim, method and outcome.</span><span lang="tr">Kısa proje özeti: amaç, yöntem ve sonuç.</span></span></p>
+            <ul class="tags"><li class="tag"><span lang="en">Funded</span><span lang="tr">Destekli</span></li></ul>
+          </div>
+        </li>
+        <li class="entry">
+          <div><div class="thumb"></div></div>
+          <div>
+            <h3><span class="placeholder"><span lang="en">Project title</span><span lang="tr">Proje adı</span></span> <span class="arrow">↗</span></h3>
+            <div class="sub"><span class="placeholder"><span lang="en">TÜBİTAK / BAP · 20XX–20XX · Role</span><span lang="tr">TÜBİTAK / BAP · 20XX–20XX · Görev</span></span></div>
+            <p><span class="placeholder"><span lang="en">Short project summary: aim, method and outcome.</span><span lang="tr">Kısa proje özeti: amaç, yöntem ve sonuç.</span></span></p>
+            <ul class="tags"><li class="tag"><span lang="en">Funded</span><span lang="tr">Destekli</span></li></ul>
+          </div>
+        </li>
+        </ul>
+      </section>
+
+      <section id="contact">
+        <h2 class="section-title"><span lang="en">Contact</span><span lang="tr">İletişim</span></h2>
+        <p><span lang="en">For collaborations, student enquiries or questions, feel free to reach out.</span><span lang="tr">İş birlikleri, öğrenci başvuruları veya sorularınız için bana ulaşabilirsiniz.</span></p>
+        <ul class="contact-lines">
+          <li><a href="mailto:yoncakeskekturk@outlook.com">yoncakeskekturk@outlook.com</a></li>
+          <li><span class="placeholder"><span lang="en">Office: building, room, campus</span><span lang="tr">Ofis: bina, oda, kampüs</span></span></li>
+        </ul>
+        <form class="contact-form" action="https://formsubmit.co/yoncakeskekturk@outlook.com" method="POST">
+          <input type="hidden" name="_next" value="https://yoncakeskekturk.com/#contact">
+          <input type="hidden" name="_captcha" value="true">
+          <div class="form-row">
+            <div class="form-group"><label for="f-name"><span lang="en">Name</span><span lang="tr">Ad Soyad</span></label><input id="f-name" type="text" name="name" required></div>
+            <div class="form-group"><label for="f-email"><span lang="en">Email</span><span lang="tr">E-posta</span></label><input id="f-email" type="email" name="email" required></div>
+          </div>
+          <div class="form-group"><label for="f-msg"><span lang="en">Message</span><span lang="tr">Mesaj</span></label><textarea id="f-msg" name="message" rows="5" required></textarea></div>
+          <button type="submit" class="btn"><span lang="en">Send message</span><span lang="tr">Mesaj gönder</span></button>
+        </form>
+      </section>
+
+      <footer class="note">© 2026 Yonca Keşkek Türk</footer>
+    </main>
   </div>
-  <div class="profiles">
-    <a href="#" target="_blank" rel="noopener">Google Scholar</a>
-    <a href="#" target="_blank" rel="noopener">ORCID</a>
-    <a href="#" target="_blank" rel="noopener">ResearchGate</a>
-    <a href="#" target="_blank" rel="noopener">LinkedIn</a>
-    <a href="mailto:yoncakeskekturk@outlook.com">Email</a>
-  </div>
-</main>
 </body>
 </html>
