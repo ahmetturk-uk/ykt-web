@@ -40,6 +40,37 @@ function initScrollSpy() {
   update();
 }
 
+// ---------- Fast smooth scroll for in-page links ----------
+// Safari's native smooth scrolling is slow; use a short, fixed-length animation instead.
+function initFastScroll() {
+  const DURATION = 450; // ms
+  const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute('href');
+    const target = id.length > 1 && document.querySelector(id);
+    if (!target) return;
+    e.preventDefault();
+
+    const offset = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+    const startY = window.scrollY;
+    const endY = Math.max(0, target.getBoundingClientRect().top + startY - offset);
+    history.replaceState(null, '', id);
+
+    if (reduce) { window.scrollTo({ top: endY, behavior: 'instant' }); return; }
+    const t0 = performance.now();
+    const step = (now) => {
+      const t = Math.min(1, (now - t0) / DURATION);
+      window.scrollTo({ top: startY + (endY - startY) * ease(t), behavior: 'instant' });
+      if (t < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  });
+}
+
 // ---------- Spotlight following the mouse ----------
 function initSpotlight() {
   const s = document.querySelector('.spotlight');
@@ -78,5 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpy();
   initSpotlight();
   initFilters();
+  initFastScroll();
 });
 
