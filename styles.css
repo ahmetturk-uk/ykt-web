@@ -289,18 +289,18 @@ section { margin-bottom: 120px; scroll-margin-top: 96px; }
   z-index: 1;
   display: grid;
   place-items: center;
-  width: 48px;
-  height: 48px;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 12px;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 8px;
+  padding: 3px;
+  border-radius: 9px;
   background: #fff;
   border: 1px solid var(--border);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .org-logo img { width: 100%; height: 100%; object-fit: contain; }
 .org-logo:hover { transform: translateY(-2px); box-shadow: 0 8px 18px -10px rgba(var(--rgb), 0.6); }
-.org-logo.small { display: inline-grid; width: 28px; height: 28px; padding: 3px; border-radius: 8px; margin: 0 8px 0 0; vertical-align: middle; }
+.org-logo.small { display: inline-grid; width: 22px; height: 22px; padding: 2px; border-radius: 6px; margin: 0 6px 0 0; vertical-align: -6px; }
 .org-link {
   position: relative;
   z-index: 1;
