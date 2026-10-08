@@ -400,23 +400,16 @@ footer.note .divider {
   background: var(--border);
 }
 footer.note .credit {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 12px;
-  border-radius: 9999px;
-  font-weight: 700;
-  color: var(--accent);
-  background: var(--chip-bg);
-  transition: all 0.2s;
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 3px;
+  transition: color 0.2s, text-decoration-color 0.2s;
 }
 footer.note .credit:hover {
-  color: #fff;
-  background: var(--gradient);
-  transform: translateY(-1px);
+  color: var(--accent);
+  text-decoration-color: currentColor;
 }
-footer.note .credit .arrow { transition: transform 0.2s; }
-footer.note .credit:hover .arrow { transform: translate(2px, -2px); }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 1000px) {
