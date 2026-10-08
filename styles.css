@@ -402,7 +402,8 @@ footer.note .divider {
 footer.note .credit {
   color: inherit;
   text-decoration: underline;
-  text-decoration-color: transparent;
+  text-decoration-color: rgba(var(--rgb), 0.45);
+  text-decoration-thickness: 1px;
   text-underline-offset: 3px;
   transition: color 0.2s, text-decoration-color 0.2s;
 }
